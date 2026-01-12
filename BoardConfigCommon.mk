@@ -55,8 +55,6 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
 
 # Camera
-$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
-
 SOONG_CONFIG_NAMESPACES += samsungCameraVars
 SOONG_CONFIG_samsungCameraVars += extra_ids
 
@@ -229,9 +227,6 @@ TARGET_USES_USB_GADGET_HAL := true
 BOARD_AVB_ENABLE := true
 BOARD_AVB_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
-
-# Vibrator
-$(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
 
 # ViPER4AndroidFX
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true

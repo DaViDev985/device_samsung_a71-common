@@ -72,6 +72,8 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
 
 # Camera
+$(call soong_config_set_bool,samsungCameraVars,needs_sec_reserved_field,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service_32.samsung \
 
@@ -400,6 +402,8 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \
 
 # Vibrator
+$(call soong_config_set_bool,samsungVibratorVars,duration_amplitude,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung \
 
